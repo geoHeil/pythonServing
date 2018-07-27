@@ -3,7 +3,7 @@ services:
   application:
     restart: always
     build: ./application
-    command: gunicorn -w 4 --bind :5000 wsgi:application
+    command: gunicorn -w 4 --bind :5000 application:application
     links:
       - db
     expose:
